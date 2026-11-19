@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Patrick Móveis - Olhar Estoque</title>
+<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="paginas.css" />
+</head>
+<body data-page="estoque">
+<div class="app">
+  <aside class="sidebar" id="sidebar"></aside>
+  <main class="content">
+    <header class="topbar" id="topbar"></header>
+    <section class="pagina">
+      <h2 class="ptitle">Olhar Estoque</h2>
+      <div class="tools"><input id="busca" placeholder="Buscar produto ou categoria..." /><span class="muted" id="resumo-estoque"></span></div>
+      <div class="card tablewrap">
+        <table><thead><tr><th>Produto</th><th>Categoria</th><th>Qtd</th><th>Preço</th><th>Ações</th></tr></thead><tbody id="tb-estoque"></tbody></table>
+      </div>
+    </section>
+    <footer class="footer" id="footer"></footer>
+  </main>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

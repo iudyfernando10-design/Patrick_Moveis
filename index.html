@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Patrick Móveis - Painel Administrativo</title>
+<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="paginas.css" />
+</head>
+<body data-page="inicio">
+<div class="app">
+  <aside class="sidebar" id="sidebar"></aside>
+  <main class="content">
+    <header class="topbar" id="topbar"></header>
+    <section class="hero">
+      <div class="hero-text"><h2>Olá, chefe!</h2><p>Bem-vindo ao painel de controle da sua loja.</p></div>
+      <!-- cole aqui o SVG do sofá (.hero-sofa) do seu index original, se quiser -->
+      <div class="hero-stripe"></div>
+    </section>
+    <section class="stats cinco">
+      <article class="stat"><svg class="stat-ico"><use href="#i-box"/></svg><div><strong id="stat-unidades">0</strong><span>Unidades no estoque</span></div></article>
+      <article class="stat"><svg class="stat-ico"><use href="#i-users"/></svg><div><strong id="stat-func">0</strong><span>Funcionários cadastrados</span></div></article>
+      <article class="stat"><svg class="stat-ico"><use href="#i-trend"/></svg><div><strong id="stat-saldo">R$ 0,00</strong><span>Saldo atual</span></div></article>
+      <article class="stat"><svg class="stat-ico"><use href="#i-cart"/></svg><div><strong id="stat-produtos">0</strong><span>Produtos cadastrados</span></div></article>
+      <article class="stat"><svg class="stat-ico"><use href="#i-tools"/></svg><div><strong id="stat-terc">R$ 0,00</strong><span>A pagar a terceirizados (semana)</span></div></article>
+    </section>
+    <section class="panels">
+      <div class="panel fin">
+        <h3 class="panel-title">Resumo Financeiro</h3>
+        <div class="fin-body">
+          <div class="bars" aria-hidden="true"><b style="height:38%"></b><b style="height:70%"></b><b style="height:55%"></b><b style="height:100%"></b><b style="height:78%"></b></div>
+          <div class="fin-values">
+            <div class="row"><span>Entradas:</span><em class="green" id="fin-entradas">R$ 0,00</em></div>
+            <div class="row"><span>Saídas:</span><em class="red" id="fin-saidas">R$ 0,00</em></div>
+            <hr />
+            <div class="row total"><span>Saldo:</span><em class="yellow" id="fin-saldo">R$ 0,00</em></div>
+          </div>
+        </div>
+      </div>
+      <div class="panel quick">
+        <h3 class="panel-title">Acesso Rápido</h3>
+        <div class="quick-list">
+          <a class="qbtn primary" href="cadastrar.html"><svg><use href="#i-plus"/></svg>Cadastrar Novo Produto</a>
+          <a class="qbtn" href="estoque.html"><svg><use href="#i-box"/></svg>Consultar Estoque</a>
+          <a class="qbtn" href="funcionarios.html"><svg><use href="#i-users"/></svg>Cadastrar Funcionário</a>
+          <a class="qbtn" href="terceirizados.html"><svg><use href="#i-tools"/></svg>Terceirizados</a>
+          <a class="qbtn" href="financeiro.html"><svg><use href="#i-wallet"/></svg>Abrir Financeiro</a>
+        </div>
+      </div>
+      <div class="panel moves">
+        <h3 class="panel-title"><svg class="ico yellow-ico"><use href="#i-clock"/></svg>Últimas Movimentações</h3>
+        <ul class="move-list" id="move-list"></ul>
+      </div>
+    </section>
+    <footer class="footer" id="footer"></footer>
+  </main>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

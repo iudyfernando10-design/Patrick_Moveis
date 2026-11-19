@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Patrick Móveis - Terceirizados</title>
+<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="paginas.css" />
+</head>
+<body data-page="terceirizados">
+<div class="app">
+  <aside class="sidebar" id="sidebar"></aside>
+  <main class="content">
+    <header class="topbar" id="topbar"></header>
+    <section class="pagina">
+      <h2 class="ptitle">Funcionários Terceirizados</h2>
+
+      <h3 class="subt">1. Cadastrar terceirizado</h3>
+      <form class="card form" id="f-terc">
+        <label>Nome<input name="nome" required /></label>
+        <label>Telefone<input name="tel" placeholder="(45) 99999-9999" /></label>
+        <label>Porcentagem por montagem (%)<input name="percentual" type="number" min="0" max="100" step="0.01" required placeholder="Ex: 10" /></label>
+        <button class="btn" type="submit">Cadastrar</button>
+      </form>
+
+      <h3 class="subt">2. Lançar nota de montagem</h3>
+      <form class="card form" id="f-nota">
+        <label>Terceirizado<select id="sel-terc" name="terc"></select></label>
+        <label>Descrição da montagem<input name="desc" required placeholder="Ex: Montagem guarda-roupa 6 portas" /></label>
+        <label>Valor da nota (R$)<input name="valor" type="number" min="0.01" step="0.01" required /></label>
+        <label>Data<input name="data" type="date" required /></label>
+        <button class="btn" type="submit">Lançar Nota</button>
+      </form>
+
+      <h3 class="subt">3. Fechamento da semana</h3>
+      <div class="tools semana">
+        <button class="mini-btn" id="sem-ant" type="button">◀ Semana anterior</button>
+        <strong id="sem-label"></strong>
+        <button class="mini-btn" id="sem-prox" type="button">Próxima semana ▶</button>
+        <button class="mini-btn" id="sem-hoje" type="button">Semana atual</button>
+      </div>
+      <div class="card tablewrap">
+        <table><thead><tr><th>Terceirizado</th><th>%</th><th>Notas</th><th>Total das notas</th><th>A pagar</th><th>Status</th><th>Ações</th></tr></thead><tbody id="tb-resumo"></tbody></table>
+      </div>
+      <div class="card totalbox"><span>Total pendente a pagar na semana:</span><b id="total-semana">R$ 0,00</b></div>
+
+      <h3 class="subt">Notas da semana</h3>
+      <div class="card tablewrap">
+        <table><thead><tr><th>Data</th><th>Terceirizado</th><th>Descrição</th><th>Valor da nota</th><th>Parte dele</th><th>Situação</th><th></th></tr></thead><tbody id="tb-notas"></tbody></table>
+      </div>
+    </section>
+    <footer class="footer" id="footer"></footer>
+  </main>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

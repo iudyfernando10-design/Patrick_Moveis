@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Patrick Móveis - Funcionários</title>
+<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="paginas.css" />
+</head>
+<body data-page="funcionarios">
+<div class="app">
+  <aside class="sidebar" id="sidebar"></aside>
+  <main class="content">
+    <header class="topbar" id="topbar"></header>
+    <section class="pagina">
+      <h2 class="ptitle">Funcionários</h2>
+      <form class="card form" id="f-func">
+        <label>Nome<input name="nome" required /></label>
+        <label>Cargo<input name="cargo" required placeholder="Ex: Vendedor" /></label>
+        <label>Salário (R$)<input name="salario" type="number" min="0" step="0.01" required /></label>
+        <label>Telefone<input name="tel" placeholder="(45) 99999-9999" /></label>
+        <button class="btn" type="submit">Cadastrar Funcionário</button>
+      </form>
+      <div class="card tablewrap">
+        <table><thead><tr><th>Nome</th><th>Cargo</th><th>Telefone</th><th>Salário</th><th>Ações</th></tr></thead><tbody id="tb-func"></tbody></table>
+      </div>
+    </section>
+    <footer class="footer" id="footer"></footer>
+  </main>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

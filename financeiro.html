@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Patrick Móveis - Financeiro</title>
+<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="paginas.css" />
+</head>
+<body data-page="financeiro">
+<div class="app">
+  <aside class="sidebar" id="sidebar"></aside>
+  <main class="content">
+    <header class="topbar" id="topbar"></header>
+    <section class="pagina">
+      <h2 class="ptitle">Financeiro</h2>
+      <div class="stats mini">
+        <article class="stat"><svg class="stat-ico"><use href="#i-up"/></svg><div><strong class="green" id="fin-entradas">R$ 0,00</strong><span>Entradas</span></div></article>
+        <article class="stat"><svg class="stat-ico"><use href="#i-down"/></svg><div><strong class="red" id="fin-saidas">R$ 0,00</strong><span>Saídas</span></div></article>
+        <article class="stat"><svg class="stat-ico"><use href="#i-trend"/></svg><div><strong class="yellow" id="fin-saldo">R$ 0,00</strong><span>Saldo</span></div></article>
+      </div>
+      <form class="card form" id="f-mov">
+        <label>Tipo<select name="tipo"><option value="entrada">Entrada</option><option value="saida">Saída</option></select></label>
+        <label>Descrição<input name="desc" required placeholder="Ex: Aluguel, venda avulsa..." /></label>
+        <label>Valor (R$)<input name="valor" type="number" min="0.01" step="0.01" required /></label>
+        <button class="btn" type="submit">Lançar</button>
+      </form>
+      <div class="tools"><select id="filtro"><option value="">Todas</option><option value="entrada">Entradas</option><option value="saida">Saídas</option></select></div>
+      <div class="card tablewrap">
+        <table><thead><tr><th>Data</th><th>Tipo</th><th>Descrição</th><th>Valor</th><th></th></tr></thead><tbody id="tb-mov"></tbody></table>
+      </div>
+    </section>
+    <footer class="footer" id="footer"></footer>
+  </main>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
